@@ -1,12 +1,13 @@
 //Variables de estados
 int estado;
 int PANTALLAINICIAL = 0;
-int JUEGO = 1;
-int JUEGO2 = 5;
-int INSTRUCCIONES = 2;
-int VICTORIA = 3;
-int VICTORIA2 = 6;
+int INSTRUCCIONES = 1;
+int SJUEGO = 2;
+int JUEGO2 = 3;
 int DERROTA = 4;
+int VICTORIA = 5;
+int VICTORIA2 = 6;
+
 
 //Imagenes 
 PImage img;
@@ -26,6 +27,7 @@ void setup() {
   //Archivos de imagenes
   img = loadImage("Portada.png");
   img2 = loadImage("Instrucciones.png");
+  img3 = loadImage("jugadores.png");
    
 }
 
@@ -39,7 +41,9 @@ void draw() {
     background(0);
     image(img2, 0, 0, 1000, 1000);
    
-  } else if (estado == JUEGO){
+  } else if (estado == SJUEGO){
+     background(0);
+    image(img3, 0, 0, 1000, 1000);
   }
 }
 
@@ -47,7 +51,11 @@ void mouseReleased() { //Controles de usuario para estados
 
 //menu a eleccion del jugador 
   if (mouseY > 640 && mouseY < 670 && mouseX > 600 && mouseX < 880 && estado == PANTALLAINICIAL) {
-    estado = JUEGO;
+    estado = SJUEGO;
+    
+//eleccion del jugador a menu
+  } else if (mouseY > 930 && mouseY < 970 && mouseX > 830 && mouseX < 960 && estado == SJUEGO) {
+    estado = PANTALLAINICIAL;
     
 //menu a instrucciones  
   } else if (mouseY > 710 && mouseY < 740 &&  mouseX > 600 && mouseX < 880 && estado == PANTALLAINICIAL) {
