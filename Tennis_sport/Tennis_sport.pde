@@ -3,7 +3,7 @@ int estado;
 int PANTALLAINICIAL = 0;
 int INSTRUCCIONES = 1;
 int SJUEGO = 2;
-int JUEGO2 = 3;
+int JUEGO = 3;
 int DERROTA = 4;
 int VICTORIA = 5;
 int VICTORIA2 = 6;
@@ -28,6 +28,7 @@ void setup() {
   img = loadImage("Portada.png");
   img2 = loadImage("Instrucciones.png");
   img3 = loadImage("jugadores.png");
+  img4 = loadImage("cancha.png");
    
 }
 
@@ -41,9 +42,13 @@ void draw() {
     background(0);
     image(img2, 0, 0, 1000, 1000);
    
-  } else if (estado == SJUEGO){
+  } else if (estado == SJUEGO){  //Pantalla de seleccion de jugador
      background(0);
     image(img3, 0, 0, 1000, 1000);
+    
+  } else if (estado == JUEGO){  //Pantalla del partido
+     background(0);
+    image(img4, 0, 0, 1000, 1000);
   }
 }
 
@@ -51,10 +56,18 @@ void mouseReleased() { //Controles de usuario para estados
 
 //menu a eleccion del jugador 
   if (mouseY > 640 && mouseY < 670 && mouseX > 600 && mouseX < 880 && estado == PANTALLAINICIAL) {
-    estado = SJUEGO;
     
+    estado = SJUEGO;
+    rect(400,700,20,20);
+    
+//eleccion de jugador a juego
+  } else if (mouseY > 170 && mouseY < 700 && mouseX > 150 && mouseX < 410 && estado == SJUEGO) {
+    
+    estado = JUEGO;
+   
 //eleccion del jugador a menu
   } else if (mouseY > 930 && mouseY < 970 && mouseX > 830 && mouseX < 960 && estado == SJUEGO) {
+  
     estado = PANTALLAINICIAL;
     
 //menu a instrucciones  
