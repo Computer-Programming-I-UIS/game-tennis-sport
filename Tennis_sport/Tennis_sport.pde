@@ -15,7 +15,7 @@ PImage img;
 PImage img2;
 PImage img3;
 PImage img4;
-
+PImage img5;
 
 //Jugadores
 Tenista1 mjugador;
@@ -34,7 +34,7 @@ void setup() {
   img2 = loadImage("Instrucciones.png");
   img3 = loadImage("jugadores.png");
   img4 = loadImage("cancha.png");
-  
+  img5 = loadImage("clasificación.png");
    
     //Jugadores
   mjugador = new Tenista1(300, 850);
