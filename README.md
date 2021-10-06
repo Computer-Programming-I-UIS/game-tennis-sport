@@ -16,7 +16,7 @@ Descargar la versión más actual de Processing que se adecué al tipo de proces
 
 # Género
 
-Videojuego de simulación de la disciplina deportiva del Tennis.
+Videojuego deportivo RPG enfocado en Tennis
 
 # Clasificación por edades
 
