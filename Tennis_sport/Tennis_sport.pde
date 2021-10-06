@@ -16,8 +16,11 @@ PImage img2;
 PImage img3;
 PImage img4;
 PImage img5;
+<<<<<<< HEAD
 PImage img6;
 PImage img7;
+=======
+>>>>>>> 0f7c7163600346555cce643ac57b122d9bdac73d
 
 //Jugadores
 Tenista1 mjugador;
@@ -37,8 +40,12 @@ void setup() {
   img3 = loadImage("jugadores.png");
   img4 = loadImage("cancha.png");
   img5 = loadImage("clasificación.png");
+<<<<<<< HEAD
   img6 = loadImage("animadom.gif");
   img7 = loadImage("animadof.gif");
+=======
+   
+>>>>>>> 0f7c7163600346555cce643ac57b122d9bdac73d
     //Jugadores
   mjugador = new Tenista1(300, 850);
   fjugador = new Tenista2(500, 850);
