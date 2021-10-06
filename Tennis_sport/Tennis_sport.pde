@@ -3,10 +3,11 @@ int estado;
 int PANTALLAINICIAL = 0;
 int INSTRUCCIONES = 1;
 int SJUEGO = 2;
-int JUEGO = 3;
-int DERROTA = 4;
-int VICTORIA = 5;
-int VICTORIA2 = 6;
+int JUEGOM = 3;
+int JUEGOF = 4;
+int DERROTA = 5;
+int VICTORIA = 6;
+int VICTORIA2 = 7;
 
 
 //Imagenes 
@@ -15,6 +16,10 @@ PImage img2;
 PImage img3;
 PImage img4;
 
+
+//Jugadores
+Tenista1 mjugador;
+Tenista2 fjugador;
 
 void setup() {
   
@@ -29,10 +34,14 @@ void setup() {
   img2 = loadImage("Instrucciones.png");
   img3 = loadImage("jugadores.png");
   img4 = loadImage("cancha.png");
+  
    
+    //Jugadores
+  mjugador = new Tenista1(300, 850);
+  fjugador = new Tenista2(500, 850);
 }
 
-void draw() {
+void draw() { //<>//
   
   if (estado == PANTALLAINICIAL) { //Pantalla de inicio
     background(0);
@@ -45,10 +54,27 @@ void draw() {
   } else if (estado == SJUEGO){  //Pantalla de seleccion de jugador
      background(0);
     image(img3, 0, 0, 1000, 1000);
+   
     
-  } else if (estado == JUEGO){  //Pantalla del partido
+  } else if (estado == JUEGOM){  //Pantalla del partido jugador 'Jos'
      background(0);
     image(img4, 0, 0, 1000, 1000);
+    
+     //Moviemto del jugador y dibujo
+     mjugador.update1();
+     mjugador.ser1();
+    
+  } else if (estado == JUEGOF){  //Pantalla del partido jugadora 'Fran'
+     background(0);
+    image(img4, 0, 0, 1000, 1000);
+   
+    //Moviemto del jugador y dibujo
+    fjugador.update2();
+    fjugador.ser2();
+    
+    
+    
+    
   }
 }
 
@@ -58,12 +84,17 @@ void mouseReleased() { //Controles de usuario para estados
   if (mouseY > 640 && mouseY < 670 && mouseX > 600 && mouseX < 880 && estado == PANTALLAINICIAL) {
     
     estado = SJUEGO;
-    rect(400,700,20,20);
+   
     
-//eleccion de jugador a juego
-  } else if (mouseY > 170 && mouseY < 700 && mouseX > 150 && mouseX < 410 && estado == SJUEGO) {
+//eleccion de jugador 'Jos' a juego
+  } else if (mouseY > 250 && mouseY < 700 && mouseX > 150 && mouseX < 410 && estado == SJUEGO) {
     
-    estado = JUEGO;
+    estado = JUEGOM;
+    
+ //eleccion de jugadora 'Fran' a juego
+  } else if (mouseY > 250 && mouseY < 700 && mouseX > 560 && mouseX < 820 && estado == SJUEGO) {
+    
+    estado = JUEGOF;
    
 //eleccion del jugador a menu
   } else if (mouseY > 930 && mouseY < 970 && mouseX > 830 && mouseX < 960 && estado == SJUEGO) {
