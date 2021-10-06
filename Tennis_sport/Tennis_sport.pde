@@ -15,7 +15,9 @@ PImage img;
 PImage img2;
 PImage img3;
 PImage img4;
-
+PImage img5;
+PImage img6;
+PImage img7;
 
 //Jugadores
 Tenista1 mjugador;
@@ -34,8 +36,9 @@ void setup() {
   img2 = loadImage("Instrucciones.png");
   img3 = loadImage("jugadores.png");
   img4 = loadImage("cancha.png");
-  
-   
+  img5 = loadImage("clasificación.png");
+  img6 = loadImage("animadom.gif");
+  img7 = loadImage("animadof.gif");
     //Jugadores
   mjugador = new Tenista1(300, 850);
   fjugador = new Tenista2(500, 850);
@@ -46,6 +49,7 @@ void draw() { //<>//
   if (estado == PANTALLAINICIAL) { //Pantalla de inicio
     background(0);
     image(img, 0, 0, 1000, 1000);
+    image(img5, 50, 850, 80, 100);
     
   } else if (estado == INSTRUCCIONES) { //Pantalla de instrucciones del juego
     background(0);
@@ -54,6 +58,9 @@ void draw() { //<>//
   } else if (estado == SJUEGO){  //Pantalla de seleccion de jugador
      background(0);
     image(img3, 0, 0, 1000, 1000);
+    image(img6, 150, 250, 260, 450);
+    image(img7, 560, 250, 260, 450);
+    
    
     
   } else if (estado == JUEGOM){  //Pantalla del partido jugador 'Jos'
