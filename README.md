@@ -15,6 +15,8 @@ Videojuego de simulación de la disciplina deportiva del Tennis.
 
 # Clasificacion por edades
 Recomendado para toda la familia
-Personas mayores de 5 años
+Personas mayores de 10 años
+![image](https://user-images.githubusercontent.com/90159928/136195333-a6db8dc5-a578-4ec2-b17b-d33b1ef77505.png)
+
 
 # Creditos
