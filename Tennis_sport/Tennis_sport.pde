@@ -1,3 +1,6 @@
+//Biblioteca de sonido
+import processing.sound.*;
+SoundFile sonido;
 //Variables de estados
 int estado;
 int PANTALLAINICIAL = 0;
@@ -46,6 +49,9 @@ void setup() {
 =======
    
 >>>>>>> 0f7c7163600346555cce643ac57b122d9bdac73d
+    //Musica
+  sonido = new SoundFile(this, "musicadefondo.mp3");
+  sonido.play(); //Reproducir sonido 
     //Jugadores
   mjugador = new Tenista1(300, 850);
   fjugador = new Tenista2(500, 850);
@@ -125,6 +131,6 @@ void mouseReleased() { //Controles de usuario para estados
     
 //Desactivar sonido
   } else if (mouseY > 780 && mouseY < 810 && mouseX > 650 && mouseX < 810 && estado == INSTRUCCIONES) {
-    
+    sonido.pause(); //Detener sonido
   }
 }
