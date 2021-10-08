@@ -48,16 +48,12 @@ void setup() {
   
   //Archivos de imagenes
   img = loadImage("Portada.png");
-  img2 = loadImage("Instrucciones.png");
+  img2 = loadImage("instruccion.png");
   img3 = loadImage("jugadores.png");
   img4 = loadImage("cancha.png");
   img5 = loadImage("clasificación.png");
 
-  img6 = loadImage("animadom.gif");
-  img7 = loadImage("animadof.gif");
-
-   
-
+  
   img8 = loadImage("salir.png");
   img9 = loadImage("sonido.png");
   img10 = loadImage("abandonar.png");
@@ -65,19 +61,11 @@ void setup() {
   img12 = loadImage("winnerfran.png");
   img13 = loadImage("gameover.png");
 
- //Musica
-<<<<<<< HEAD
-  sonido = new SoundFile(this, "sonido.mp3");
-=======
- // sonido = new SoundFile(this, "sonido.mp3");
- // sonido.play(); //Reproducir sonido 
+
+ //sonido = new SoundFile(this, "sonido.mp3");
+ //sonido.play(); //Reproducir sonido 
   
-=======
->>>>>>> 0f7c7163600346555cce643ac57b122d9bdac73d
-    //Musica
-  sonido = new SoundFile(this, "musicadefondo.mp3");
->>>>>>> 4b96d140fef31581551d35254b95ab48e504253d
-  sonido.play(); //Reproducir sonido 
+
   
 
     //Jugadores
@@ -110,6 +98,7 @@ void draw() {
     image(img4, 0, 0, 1000, 1000);
     image(img8, 20, 20, 40, 40);
     image(img9, 20, 80, 40, 40);
+   
     
     
      //Moviemto del jugador y dibujo
@@ -169,6 +158,7 @@ void mouseReleased() { //Controles de usuario para estados
     
     estado = PANTALLAINICIAL;
     
+    
 //abandonara a partido
  } else if (mouseY > 555 && mouseY < 605 && mouseX > 550 && mouseX < 600 && estado == ABANDONARM) {
     
@@ -177,7 +167,7 @@ void mouseReleased() { //Controles de usuario para estados
 // Desactivar sonido en la partida
   } else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == JUEGOM) {
     
-    //Desactivar sonido
+    sonido.pause(); //Detener sonido
   
     
  //eleccion de jugadora 'Fran' a juego
@@ -203,7 +193,7 @@ void mouseReleased() { //Controles de usuario para estados
 // Desactivar sonido en la partida
   } else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == JUEGOF) {
     
-    //Desactivar sonido
+    sonido.pause(); //Detener sonido
    
 //eleccion del jugador a menu
   } else if (mouseY > 930 && mouseY < 970 && mouseX > 830 && mouseX < 960 && estado == SJUEGO) {

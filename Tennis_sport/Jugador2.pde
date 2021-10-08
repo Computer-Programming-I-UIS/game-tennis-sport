@@ -13,6 +13,7 @@ class vsTenista1 {
   w1 = 70;
   mjugador = loadImage("mjugador.png");
 
+
    
   }
   
@@ -23,6 +24,24 @@ if(keyPressed){
      
     if(key == 'd' || key == 'D'){
   posX1 = posX1 + 10;
+  
+      if(posY1<480){
+    posX1 = constrain(posX1, 170, width-130); // Limites en la pantalla
+    
+        if(posY1<380){
+    posX1 = constrain(posX1, 200, width-160); // Limites en la pantalla
+    }
+    
+          if(posY1<330){
+    posX1 = constrain(posX1, 230, width-180); // Limites en la pantalla
+    }
+    
+            if(posY1<310){
+    posX1 = constrain(posX1, 250, width-200); // Limites en la pantalla
+    }
+    
+    }
+    
     }
 }
 
@@ -30,6 +49,25 @@ if(keyPressed){
      
     if(key == 'a' || key == 'A'){   
      posX1 = posX1 - 10;
+   
+         if(posY1<480){
+    posX1 = constrain(posX1, 170, width-130); // Limites en la pantalla
+    
+        if(posY1<380){
+    posX1 = constrain(posX1, 200, width-160); // Limites en la pantalla
+    }
+    
+          if(posY1<330){
+    posX1 = constrain(posX1, 230, width-180); // Limites en la pantalla
+    }
+    
+            if(posY1<310){
+    posX1 = constrain(posX1, 250, width-200); // Limites en la pantalla
+    }
+    
+    }
+   
+   
     }
 }
     
@@ -38,6 +76,8 @@ if(keyPressed){
     if(key == 's' || key == 'S'){
   posY1 = posY1 + 10;
   posY1 = constrain(posY1, 250, 460); // Limites en la pantalla
+  
+ 
     }
 }
 
@@ -55,6 +95,7 @@ if(keyPressed){
   void ser1(){
    //image(jugadorM, posX1-67, posY1-49,w1,w1);
    image(mjugador, posX1-67, posY1-49,w1,w1+20);
+
    
   }
 }
@@ -83,6 +124,25 @@ if(keyPressed){
      
     if(key == 'd' || key == 'D'){
   posX2 = posX2 + 10;
+  
+   if(posY2<480){
+    posX2 = constrain(posX2, 170, width-130); // Limites en la pantalla
+   }
+    
+        if(posY2<380){
+    posX2 = constrain(posX2, 200, width-160); // Limites en la pantalla
+    }
+    
+          if(posY2<330){
+    posX2 = constrain(posX2, 230, width-180); // Limites en la pantalla
+    }
+    
+            if(posY2<310){
+    posX2 = constrain(posX2, 250, width-200); // Limites en la pantalla
+    }
+    
+    
+    
     }
 }
 
@@ -90,6 +150,24 @@ if(keyPressed){
      
     if(key == 'a' || key == 'A'){   
      posX2 = posX2 -  10;
+     
+     if(posY2<480){
+    posX2 = constrain(posX2, 170, width-130); // Limites en la pantalla
+   }
+    
+        if(posY2<380){
+    posX2 = constrain(posX2, 200, width-160); // Limites en la pantalla
+    }
+    
+          if(posY2<330){
+    posX2 = constrain(posX2, 230, width-180); // Limites en la pantalla
+    }
+    
+            if(posY2<310){
+    posX2 = constrain(posX2, 250, width-200); // Limites en la pantalla
+    }
+    
+    
     }
 }
     

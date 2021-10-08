@@ -11,6 +11,7 @@ class Tenista1 {
   posY1 = posYinic1;
   w1 = 100;
   jugadorM = loadImage("jugadorM.png");
+  
 
    
   }
@@ -20,16 +21,19 @@ class Tenista1 {
 void update1(){
 if (keyPressed == true && key == CODED && keyCode == RIGHT){
   posX1 = posX1 + 10;
-  
- // posX1 = constrain(posX1, 0, width); // Limites en la pantalla
+  posX1 = constrain(posX1, 70, width-30); // Limites en la pantalla
 }
+
 if (keyPressed == true && key == CODED && keyCode == LEFT){
   posX1 = posX1 - 10;
-  //posX1 = constrain(posX1, 0, width); // Limites en la pantalla
+  posX1 = constrain(posX1, 70, width-30); // Limites en la pantalla
 }
 if (keyPressed == true && key == CODED && keyCode == DOWN){
   posY1 = posY1 + 10;
   posY1 = constrain(posY1, 570, height-100); // Limites en la pantalla
+  
+
+  
 }
 if (keyPressed == true && key == CODED && keyCode == UP){
   posY1 = posY1 - 10;
@@ -68,9 +72,11 @@ class Tenista2 {
 void update2(){
 if (keyPressed == true && key == CODED && keyCode == RIGHT){
   posX2 = posX2 +  10;
+  posX2 = constrain(posX2, 70, width-30); // Limites en la pantalla
 }
 if (keyPressed == true && key == CODED && keyCode == LEFT){
   posX2 = posX2 -  10;
+   posX2 = constrain(posX2, 70, width-30); // Limites en la pantalla
 }
 if (keyPressed == true && key == CODED && keyCode == DOWN){
   posY2 = posY2 + 10;
@@ -88,4 +94,6 @@ if (keyPressed == true && key == CODED && keyCode == UP){
    image(jugadorF, posX2-67, posY2-49,w2,w2+20);
    
   }
+  
+  
 }
