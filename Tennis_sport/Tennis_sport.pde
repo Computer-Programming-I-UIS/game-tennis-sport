@@ -41,7 +41,7 @@ void setup() {
   img = loadImage("Portada.png");
   img2 = loadImage("Instrucciones.png");
   img3 = loadImage("jugadores.png");
-  img4 = loadImage("partido.png");
+  img4 = loadImage("partidom.png");
   img5 = loadImage("clasificación.png");
 <<<<<<< HEAD
   img6 = loadImage("animadom.gif");
