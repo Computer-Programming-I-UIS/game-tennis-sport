@@ -11,6 +11,7 @@ class Tenista1 {
   posY1 = posYinic1;
   w1 = 50;
   jugadorM = loadImage("jugadorM.jpeg");
+
    
   }
   
@@ -19,9 +20,12 @@ class Tenista1 {
 void update1(){
 if (keyPressed == true && key == CODED && keyCode == RIGHT){
   posX1 = posX1 + 6;
+  
+ // posX1 = constrain(posX1, 0, width); // Limites en la pantalla
 }
 if (keyPressed == true && key == CODED && keyCode == LEFT){
   posX1 = posX1 - 6;
+  //posX1 = constrain(posX1, 0, width); // Limites en la pantalla
 }
 if (keyPressed == true && key == CODED && keyCode == DOWN){
   posY1 = posY1 + 6;
@@ -34,6 +38,7 @@ if (keyPressed == true && key == CODED && keyCode == UP){
 
   //Dibujo
   void ser1(){
+   //image(jugadorM, posX1-67, posY1-49,w1,w1);
    image(jugadorM, posX1-67, posY1-49,w1,w1);
    
   }
@@ -51,6 +56,7 @@ class Tenista2 {
   posY2 = posYinic2;
   w2 = 50;
   jugadorF = loadImage("jugadorF.jpeg");
+  
    
   }
   
