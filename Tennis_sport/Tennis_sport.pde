@@ -38,6 +38,11 @@ Tenista2 fjugador;
 vsTenista1 VSmjugador;
 vsTenista2 VSfjugador;
 
+Pelota pelota;
+
+boolean ganador;
+int puntajeMaximo;
+
 void setup() {
   
   //Tamaño de la ventana
@@ -62,8 +67,8 @@ void setup() {
   img13 = loadImage("gameover.png");
 
 
- //sonido = new SoundFile(this, "sonido.mp3");
- //sonido.play(); //Reproducir sonido 
+ sonido = new SoundFile(this, "sonido.mp3");
+ sonido.play(); //Reproducir sonido 
   
 
   
@@ -73,6 +78,12 @@ void setup() {
   fjugador = new Tenista2(280, 850);
   VSmjugador = new vsTenista1(680, 270);
   VSfjugador = new vsTenista2(680, 270);
+  
+  pelota = new Pelota(1); //se crea la pelota
+  ganador = false; //al inicio no hay ningun ganador
+  
+  puntajeMaximo = 60; //el puntaje que los jugadores deben de alcanzar para ganar
+  
 }
 
 void draw() {
@@ -107,6 +118,11 @@ void draw() {
      
      VSfjugador.update2();
      VSfjugador.ser2();
+     
+     pelota.mostrar();
+    pelota.mover();
+     pelota.validarReboteParedes();
+     
     
   } else if (estado == JUEGOF){  //Pantalla del partido jugadora 'Fran'
      background(0);
@@ -120,6 +136,10 @@ void draw() {
     
     VSmjugador.update1();
     VSmjugador.ser1();
+    
+    pelota.mostrar();
+    pelota.mover();
+     pelota.validarReboteParedes();
 
  } else if (estado == ABANDONARM) { //Pantalla de abandonar juego
     background(0);
