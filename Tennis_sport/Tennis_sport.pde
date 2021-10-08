@@ -48,7 +48,7 @@ void setup() {
   
   //Archivos de imagenes
   img = loadImage("Portada.png");
-  img2 = loadImage("Instrucciones.png");
+  img2 = loadImage("instruccion.png");
   img3 = loadImage("jugadores.png");
   img4 = loadImage("cancha.png");
   img5 = loadImage("clasificación.png");
