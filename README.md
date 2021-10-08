@@ -12,7 +12,7 @@ Franlin Patricia Rojas Castro - 2193027
 
 # Instrucciones para compilar el juego
 
-Descargar la versión más actual de Processing que se adecué al tipo de procesador que el usuario maneja y el repositorio completo en una carpeta zip, añadir los archivos de la carpeta data a la carpeta del sketh donde se va a ejecutar el juego en Processing, añadir la librería "" de sonido al código y ejecutarlo.
+Descargar la versión más actual de Processing que se adecué al tipo de procesador que el usuario maneja y el repositorio completo en una carpeta zip, añadir los archivos de la carpeta data a la carpeta del sketh donde se va a ejecutar el juego en Processing, añadir la librería "Sound" de sonido al código y ejecutarlo.
 
 # Género
 

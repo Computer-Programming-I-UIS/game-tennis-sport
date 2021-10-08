@@ -1,4 +1,7 @@
+<<<<<<< HEAD
  //<>//
+=======
+>>>>>>> b388225777c3e54c9b36db57cdf972a0f7195af5
 //Biblioteca de sonido
 import processing.sound.*;
 SoundFile sonido;
@@ -57,6 +60,7 @@ void setup() {
   img7 = loadImage("animadof.gif");
 //=======
    
+<<<<<<< HEAD
 //>>>>>>> 0f7c7163600346555cce643ac57b122d9bdac73d
   img8 = loadImage("salir.png");
   img9 = loadImage("sonido.png");
@@ -69,6 +73,12 @@ void setup() {
  // sonido = new SoundFile(this, "musicadefondo.mp3");
  // sonido.play(); //Reproducir sonido 
   
+=======
+>>>>>>> 0f7c7163600346555cce643ac57b122d9bdac73d
+    //Musica
+  sonido = new SoundFile(this, "musicadefondo.mp3");
+  sonido.play(); //Reproducir sonido 
+>>>>>>> b388225777c3e54c9b36db57cdf972a0f7195af5
     //Jugadores
   mjugador = new Tenista1(300, 850);
   fjugador = new Tenista2(210, 850);
@@ -202,6 +212,10 @@ void mouseReleased() { //Controles de usuario para estados
     
 //Desactivar sonido
   } else if (mouseY > 780 && mouseY < 810 && mouseX > 650 && mouseX < 810 && estado == INSTRUCCIONES) {
+<<<<<<< HEAD
   //   sonido.pause(); //Detener sonido
+=======
+    sonido.pause(); //Detener sonido
+>>>>>>> b388225777c3e54c9b36db57cdf972a0f7195af5
   }
 }
