@@ -66,7 +66,17 @@ void setup() {
   img13 = loadImage("gameover.png");
 
  //Musica
+<<<<<<< HEAD
   sonido = new SoundFile(this, "sonido.mp3");
+=======
+ // sonido = new SoundFile(this, "sonido.mp3");
+ // sonido.play(); //Reproducir sonido 
+  
+=======
+>>>>>>> 0f7c7163600346555cce643ac57b122d9bdac73d
+    //Musica
+  sonido = new SoundFile(this, "musicadefondo.mp3");
+>>>>>>> 4b96d140fef31581551d35254b95ab48e504253d
   sonido.play(); //Reproducir sonido 
   
 
