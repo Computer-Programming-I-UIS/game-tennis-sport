@@ -35,3 +35,6 @@ Personas mayores de 10 años
 # Créditos
 
 El videojuego es creado por Franlin Rojas y Josman Rico.
+
+Música: Tribute (by FUGUE)
+Músico: Marco Lazovic
