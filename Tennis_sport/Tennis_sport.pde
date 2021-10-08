@@ -1,8 +1,4 @@
-<<<<<<< HEAD
- //<>//
-=======
->>>>>>> b388225777c3e54c9b36db57cdf972a0f7195af5
-//Biblioteca de sonido
+//Biblioteca de sonido //<>//
 import processing.sound.*;
 SoundFile sonido;
 //Variables de estados
@@ -25,7 +21,7 @@ PImage img2;
 PImage img3;
 PImage img4;
 PImage img5;
-//<<<<<<< HEAD
+
 PImage img6;
 PImage img7;
 PImage img8;
@@ -34,12 +30,13 @@ PImage img10;
 PImage img11;
 PImage img12;
 PImage img13;
-//=======
-//>>>>>>> 0f7c7163600346555cce643ac57b122d9bdac73d
+
 
 //Jugadores
 Tenista1 mjugador;
 Tenista2 fjugador;
+vsTenista1 VSmjugador;
+vsTenista2 VSfjugador;
 
 void setup() {
   
@@ -53,15 +50,14 @@ void setup() {
   img = loadImage("Portada.png");
   img2 = loadImage("Instrucciones.png");
   img3 = loadImage("jugadores.png");
-  img4 = loadImage("partidom.png");
+  img4 = loadImage("cancha.png");
   img5 = loadImage("clasificación.png");
-//<<<<<<< HEAD
+
   img6 = loadImage("animadom.gif");
   img7 = loadImage("animadof.gif");
-//=======
+
    
-<<<<<<< HEAD
-//>>>>>>> 0f7c7163600346555cce643ac57b122d9bdac73d
+
   img8 = loadImage("salir.png");
   img9 = loadImage("sonido.png");
   img10 = loadImage("abandonar.png");
@@ -70,18 +66,15 @@ void setup() {
   img13 = loadImage("gameover.png");
 
  //Musica
- // sonido = new SoundFile(this, "musicadefondo.mp3");
- // sonido.play(); //Reproducir sonido 
-  
-=======
->>>>>>> 0f7c7163600346555cce643ac57b122d9bdac73d
-    //Musica
-  sonido = new SoundFile(this, "musicadefondo.mp3");
+  sonido = new SoundFile(this, "sonido.mp3");
   sonido.play(); //Reproducir sonido 
->>>>>>> b388225777c3e54c9b36db57cdf972a0f7195af5
+  
+
     //Jugadores
-  mjugador = new Tenista1(300, 850);
-  fjugador = new Tenista2(210, 850);
+  mjugador = new Tenista1(280, 850);
+  fjugador = new Tenista2(280, 850);
+  VSmjugador = new vsTenista1(680, 270);
+  VSfjugador = new vsTenista2(680, 270);
 }
 
 void draw() {
@@ -98,8 +91,7 @@ void draw() {
   } else if (estado == SJUEGO){  //Pantalla de seleccion de jugador
      background(0);
     image(img3, 0, 0, 1000, 1000);
-    image(img6, 150, 250, 260, 450);
-    image(img7, 560, 250, 260, 450);
+    
     
    
     
@@ -113,6 +105,9 @@ void draw() {
      //Moviemto del jugador y dibujo
      mjugador.update1();
      mjugador.ser1();
+     
+     VSfjugador.update2();
+     VSfjugador.ser2();
     
   } else if (estado == JUEGOF){  //Pantalla del partido jugadora 'Fran'
      background(0);
@@ -123,6 +118,9 @@ void draw() {
     //Moviemto del jugador y dibujo
     fjugador.update2();
     fjugador.ser2();
+    
+    VSmjugador.update1();
+    VSmjugador.ser1();
 
  } else if (estado == ABANDONARM) { //Pantalla de abandonar juego
     background(0);
@@ -147,7 +145,7 @@ void mouseReleased() { //Controles de usuario para estados
    
     
 //eleccion de jugador 'Jos' a juego
-  } else if (mouseY > 250 && mouseY < 700 && mouseX > 150 && mouseX < 410 && estado == SJUEGO) {
+  } else if (mouseY > 250 && mouseY < 700 && mouseX > 150 && mouseX < 460 && estado == SJUEGO) {
     
     estado = JUEGOM;
     
@@ -173,7 +171,7 @@ void mouseReleased() { //Controles de usuario para estados
   
     
  //eleccion de jugadora 'Fran' a juego
-  } else if (mouseY > 250 && mouseY < 700 && mouseX > 560 && mouseX < 820 && estado == SJUEGO) {
+  } else if (mouseY > 250 && mouseY < 700 && mouseX > 560 && mouseX < 890 && estado == SJUEGO) {
     
     estado = JUEGOF;
     
@@ -212,10 +210,8 @@ void mouseReleased() { //Controles de usuario para estados
     
 //Desactivar sonido
   } else if (mouseY > 780 && mouseY < 810 && mouseX > 650 && mouseX < 810 && estado == INSTRUCCIONES) {
-<<<<<<< HEAD
-  //   sonido.pause(); //Detener sonido
-=======
+
     sonido.pause(); //Detener sonido
->>>>>>> b388225777c3e54c9b36db57cdf972a0f7195af5
+
   }
 }
