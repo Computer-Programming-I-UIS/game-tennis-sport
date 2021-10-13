@@ -240,7 +240,7 @@ void mouseReleased() { //Controles de usuario para estados
 //Desactivar sonido
   } else if (mouseY > 780 && mouseY < 810 && mouseX > 650 && mouseX < 810 && estado == INSTRUCCIONES) {
 
-    sonido.pause(); //Detener sonido
+    sonido.stop(); //Detener sonido
 
   }
 }
