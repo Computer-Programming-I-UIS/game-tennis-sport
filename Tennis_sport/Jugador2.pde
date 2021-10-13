@@ -1,15 +1,15 @@
 //Clase
 class vsTenista1 { 
-  float posX1;
-  float posY1;
+  float vsposX1;
+  float vsposY1;
   float w1;
   PImage mjugador;
   PImage mjugador_arriba;
   
   //CONSTRUCTOR
-  vsTenista1(int posXinic1, int posYinic1){
-  posX1 = posXinic1;
-  posY1 = posYinic1;
+  vsTenista1(int vsposXinic1, int vsposYinic1){
+  vsposX1 = vsposXinic1;
+  vsposY1 = vsposYinic1;
   w1 = 70;
   mjugador = loadImage("mjugador.png");
 
@@ -23,21 +23,21 @@ void update1(){
 if(keyPressed){
      
     if(key == 'd' || key == 'D'){
-  posX1 = posX1 + 10;
+  vsposX1 = vsposX1 + 10;
   
-      if(posY1<480){
-    posX1 = constrain(posX1, 170, width-130); // Limites en la pantalla
+      if(vsposY1<480){
+    vsposX1 = constrain(vsposX1, 170, width-130); // Limites en la pantalla
     
-        if(posY1<380){
-    posX1 = constrain(posX1, 200, width-160); // Limites en la pantalla
+        if(vsposY1<380){
+    vsposX1 = constrain(vsposX1, 200, width-160); // Limites en la pantalla
     }
     
-          if(posY1<330){
-    posX1 = constrain(posX1, 230, width-180); // Limites en la pantalla
+          if(vsposY1<330){
+    vsposX1 = constrain(vsposX1, 230, width-180); // Limites en la pantalla
     }
     
-            if(posY1<310){
-    posX1 = constrain(posX1, 250, width-200); // Limites en la pantalla
+            if(vsposY1<310){
+    vsposX1 = constrain(vsposX1, 250, width-200); // Limites en la pantalla
     }
     
     }
@@ -48,21 +48,21 @@ if(keyPressed){
 if(keyPressed){
      
     if(key == 'a' || key == 'A'){   
-     posX1 = posX1 - 10;
+     vsposX1 = vsposX1 - 10;
    
-         if(posY1<480){
-    posX1 = constrain(posX1, 170, width-130); // Limites en la pantalla
+         if(vsposY1<480){
+    vsposX1 = constrain(vsposX1, 170, width-130); // Limites en la pantalla
     
-        if(posY1<380){
-    posX1 = constrain(posX1, 200, width-160); // Limites en la pantalla
+        if(vsposY1<380){
+    vsposX1 = constrain(vsposX1, 200, width-160); // Limites en la pantalla
     }
     
-          if(posY1<330){
-    posX1 = constrain(posX1, 230, width-180); // Limites en la pantalla
+          if(vsposY1<330){
+    vsposX1 = constrain(vsposX1, 230, width-180); // Limites en la pantalla
     }
     
-            if(posY1<310){
-    posX1 = constrain(posX1, 250, width-200); // Limites en la pantalla
+            if(vsposY1<310){
+    vsposX1 = constrain(vsposX1, 250, width-200); // Limites en la pantalla
     }
     
     }
@@ -74,8 +74,8 @@ if(keyPressed){
 if(keyPressed){
      
     if(key == 's' || key == 'S'){
-  posY1 = posY1 + 10;
-  posY1 = constrain(posY1, 250, 460); // Limites en la pantalla
+  vsposY1 = vsposY1 + 10;
+  vsposY1 = constrain(vsposY1, 250, 460); // Limites en la pantalla
   
  
     }
@@ -84,8 +84,8 @@ if(keyPressed){
 if(keyPressed){
      
     if(key == 'w' || key == 'W'){
-  posY1 = posY1 - 10;
-  posY1 = constrain(posY1, 250, 460); // Limites en la pantalla
+  vsposY1 = vsposY1 - 10;
+  vsposY1 = constrain(vsposY1, 250, 460); // Limites en la pantalla
     }
 }
 
@@ -94,23 +94,23 @@ if(keyPressed){
   //Dibujo
   void ser1(){
    //image(jugadorM, posX1-67, posY1-49,w1,w1);
-   image(mjugador, posX1-67, posY1-49,w1,w1+20);
+   image(mjugador, vsposX1-67, vsposY1-49,w1,w1+20);
 
    
   }
 }
 
 class vsTenista2 { 
-  float posX2;
-  float posY2;
+  float vsposX2;
+  float vsposY2;
   float w2;
   PImage fjugador;
   PImage fjugador_arriba;
   
   //CONSTRUCTOR
-  vsTenista2(int posXinic2, int posYinic2){
-  posX2 = posXinic2;
-  posY2 = posYinic2;
+  vsTenista2(int vsposXinic2, int vsposYinic2){
+  vsposX2 = vsposXinic2;
+  vsposY2 = vsposYinic2;
   w2 = 70;
   fjugador = loadImage("fjugador.png");
   
@@ -123,22 +123,22 @@ void update2(){
 if(keyPressed){
      
     if(key == 'd' || key == 'D'){
-  posX2 = posX2 + 10;
+  vsposX2 = vsposX2 + 10;
   
-   if(posY2<480){
-    posX2 = constrain(posX2, 170, width-130); // Limites en la pantalla
+   if(vsposY2<480){
+    vsposX2 = constrain(vsposX2, 170, width-130); // Limites en la pantalla
    }
     
-        if(posY2<380){
-    posX2 = constrain(posX2, 200, width-160); // Limites en la pantalla
+        if(vsposY2<380){
+    vsposX2 = constrain(vsposX2, 200, width-160); // Limites en la pantalla
     }
     
-          if(posY2<330){
-    posX2 = constrain(posX2, 230, width-180); // Limites en la pantalla
+          if(vsposY2<330){
+    vsposX2 = constrain(vsposX2, 230, width-180); // Limites en la pantalla
     }
     
-            if(posY2<310){
-    posX2 = constrain(posX2, 250, width-200); // Limites en la pantalla
+            if(vsposY2<310){
+    vsposX2 = constrain(vsposX2, 250, width-200); // Limites en la pantalla
     }
     
     
@@ -149,22 +149,22 @@ if(keyPressed){
 if(keyPressed){
      
     if(key == 'a' || key == 'A'){   
-     posX2 = posX2 -  10;
+     vsposX2 = vsposX2 -  10;
      
-     if(posY2<480){
-    posX2 = constrain(posX2, 170, width-130); // Limites en la pantalla
+     if(vsposY2<480){
+    vsposX2 = constrain(vsposX2, 170, width-130); // Limites en la pantalla
    }
     
-        if(posY2<380){
-    posX2 = constrain(posX2, 200, width-160); // Limites en la pantalla
+        if(vsposY2<380){
+    vsposX2 = constrain(vsposX2, 200, width-160); // Limites en la pantalla
     }
     
-          if(posY2<330){
-    posX2 = constrain(posX2, 230, width-180); // Limites en la pantalla
+          if(vsposY2<330){
+    vsposX2 = constrain(vsposX2, 230, width-180); // Limites en la pantalla
     }
     
-            if(posY2<310){
-    posX2 = constrain(posX2, 250, width-200); // Limites en la pantalla
+            if(vsposY2<310){
+    vsposX2 = constrain(vsposX2, 250, width-200); // Limites en la pantalla
     }
     
     
@@ -174,16 +174,16 @@ if(keyPressed){
 if(keyPressed){
      
     if(key == 's' || key == 'S'){
-  posY2 = posY2 +  10;
-  posY2 = constrain(posY2, 250, 460); // Limites en la pantalla
+  vsposY2 = vsposY2 +  10;
+  vsposY2 = constrain(vsposY2, 250, 460); // Limites en la pantalla
     }
 }
 
 if(keyPressed){
      
     if(key == 'w' || key == 'W'){
-  posY2 = posY2 -  10;
-  posY2 = constrain(posY2, 250, 460); // Limites en la pantalla
+  vsposY2 = vsposY2 -  10;
+  vsposY2 = constrain(vsposY2, 250, 460); // Limites en la pantalla
     }
 }
 
@@ -191,7 +191,7 @@ if(keyPressed){
 
   //Dibujo
   void ser2(){
-   image(fjugador, posX2-67, posY2-49,w2,w2+20);
+   image(fjugador, vsposX2-67, vsposY2-49,w2,w2+20);
    
   }
 }
