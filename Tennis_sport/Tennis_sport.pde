@@ -41,6 +41,7 @@ vsTenista2 VSfjugador;
 Pelota pelota;
 
 boolean ganador;
+boolean reinicio = false;
 int puntajeMaximo;
 
 void setup() {
@@ -67,8 +68,8 @@ void setup() {
   img13 = loadImage("gameover.png");
 
 
- sonido = new SoundFile(this, "sonido.mp3");
- sonido.play(); //Reproducir sonido 
+ //sonido = new SoundFile(this, "sonido.mp3");
+ //sonido.play(); //Reproducir sonido 
   
 
   
@@ -93,6 +94,9 @@ void draw() {
     image(img, 0, 0, 1000, 1000);
     image(img5, 50, 850, 80, 100);
     
+    
+    
+    
   } else if (estado == INSTRUCCIONES) { //Pantalla de instrucciones del juego
     background(0);
     image(img2, 0, 0, 1000, 1000);
@@ -112,7 +116,7 @@ void draw() {
    
     
     
-     //Moviemto del jugador y dibujo
+     //Moviemto del jugador y dibujo hombre
      mjugador.update1();
      mjugador.ser1();
      
@@ -130,8 +134,8 @@ void draw() {
     image(img8, 20, 20, 40, 40);
     image(img9, 20, 80, 40, 40);
    
-    //Moviemto del jugador y dibujo
-    fjugador.update2();
+    //Moviemto del jugador y dibujo mujer
+    fjugador.update2(); 
     fjugador.ser2();
     
     VSmjugador.update1();
@@ -149,10 +153,12 @@ void draw() {
     background(0);
     image(img10, 200, 300, 600, 400);
 
+
+   
+ }
     
     
-    
-  }
+  
 }
 
 void mouseReleased() { //Controles de usuario para estados
@@ -177,8 +183,10 @@ void mouseReleased() { //Controles de usuario para estados
  } else if (mouseY > 555 && mouseY < 605 && mouseX > 405 && mouseX < 465 && estado == ABANDONARM) {
     
     estado = PANTALLAINICIAL;
+    reinicio = true;
     
     
+ 
 //abandonara a partido
  } else if (mouseY > 555 && mouseY < 605 && mouseX > 550 && mouseX < 600 && estado == ABANDONARM) {
     
@@ -204,6 +212,7 @@ void mouseReleased() { //Controles de usuario para estados
  } else if (mouseY > 555 && mouseY < 605 && mouseX > 405 && mouseX < 465 && estado == ABANDONARF) {
     
     estado = PANTALLAINICIAL;
+    
     
 //abandonara a partido
  } else if (mouseY > 555 && mouseY < 605 && mouseX > 550 && mouseX < 600 && estado == ABANDONARF) {

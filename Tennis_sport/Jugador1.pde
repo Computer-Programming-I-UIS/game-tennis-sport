@@ -2,6 +2,8 @@
 class Tenista1 { 
   float posX1;
   float posY1;
+  float posX1reinicio;
+  float posY1reinicio;
   float w1;
   PImage jugadorM;
   
@@ -9,6 +11,8 @@ class Tenista1 {
   Tenista1(int posXinic1, int posYinic1){
   posX1 = posXinic1;
   posY1 = posYinic1;
+  posX1reinicio = posXinic1;
+  posY1reinicio = posYinic1;
   w1 = 100;
   jugadorM = loadImage("jugadorM.png");
   
@@ -20,33 +24,76 @@ class Tenista1 {
 //Controles del mouse  
 void update1(){
 if (keyPressed == true && key == CODED && keyCode == RIGHT){
+  
   posX1 = posX1 + 10;
   posX1 = constrain(posX1, 70, width-30); // Limites en la pantalla
+  
+   if(reinicio==true){
+  
+  posX1reinicio = posX1reinicio + 10;
+  posX1reinicio = constrain(posX1reinicio, 70, width-30); // Limites en la pantal
+   }
 }
 
 if (keyPressed == true && key == CODED && keyCode == LEFT){
+  
   posX1 = posX1 - 10;
   posX1 = constrain(posX1, 70, width-30); // Limites en la pantalla
+  
+  if(reinicio==true){
+  posX1reinicio = posX1reinicio - 10;
+  posX1reinicio = constrain(posX1reinicio, 70, width-30); // Limites en la pantal
+  }
+  
 }
 if (keyPressed == true && key == CODED && keyCode == DOWN){
+  
   posY1 = posY1 + 10;
   posY1 = constrain(posY1, 570, height-100); // Limites en la pantalla
   
-
+  if(reinicio==true){
+  posY1reinicio = posY1reinicio + 10;
+  posY1reinicio = constrain(posY1reinicio, 570, height-100); // Limites en la pantalla
+  }
   
 }
 if (keyPressed == true && key == CODED && keyCode == UP){
+  
   posY1 = posY1 - 10;
   posY1 = constrain(posY1, 570, height-100); // Limites en la pantalla
+  
+  if(reinicio==true){
+  posY1reinicio = posY1reinicio - 10;
+  posY1reinicio = constrain(posY1reinicio, 570, height-100); // Limites en la pantalla
+  }
+  
 }
+
+
+
+
 
 }
 
   //Dibujo
   void ser1(){
    //image(jugadorM, posX1-67, posY1-49,w1,w1);
-   image(jugadorM, posX1-67, posY1-49,w1,w1+20);
+   //image(jugadorM, posX1-67, posY1-49,w1,w1+20);
    //rect(posX1+550,posY1+30,w1,w1-40);
+   
+    if(reinicio==false){
+   image(jugadorM, posX1-67, posY1-49,w1,w1+20);
+    }
+    
+   if(reinicio==true)
+   {
+     image(jugadorM, posX1reinicio-67, posY1reinicio-49,w1,w1+20);
+     
+     //recordar reiniciar puntuación
+   }
+   
+   
+   
    
   }
 }
