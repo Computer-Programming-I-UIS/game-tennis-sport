@@ -223,9 +223,13 @@ void mouseReleased() { //Controles de usuario para estados
     
 // Desactivar sonido en la partida
   } else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == JUEGOF) {
-    
-    sonido.pause(); //Detener sonido
    
+   if(sonido.isPlaying()){
+    sonido.pause(); //Detener sonido
+  }else{
+    sonido.play();
+  }
+    
 //eleccion del jugador a menu
   } else if (mouseY > 930 && mouseY < 970 && mouseX > 830 && mouseX < 960 && estado == SJUEGO) {
   
