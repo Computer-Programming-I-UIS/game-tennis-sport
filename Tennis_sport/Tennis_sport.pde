@@ -13,7 +13,7 @@ int VICTORIA = 6;
 int VICTORIA2 = 7;
 int ABANDONARM = 8;
 int ABANDONARF = 9;
-
+int CREDITOS = 10;
 
 //Imagenes 
 PImage img;
@@ -30,7 +30,7 @@ PImage img10;
 PImage img11;
 PImage img12;
 PImage img13;
-
+PImage img14;
 
 //Jugadores
 Tenista1 mjugador;
@@ -66,7 +66,7 @@ void setup() {
   img11 = loadImage("winnerjos.png");
   img12 = loadImage("winnerfran.png");
   img13 = loadImage("gameover.png");
-
+  img14 = loadImage("creditos.png");
 
  sonido = new SoundFile(this, "sonido.mp3");
  sonido.play(); //Reproducir sonido 
@@ -101,12 +101,13 @@ void draw() {
     background(0);
     image(img2, 0, 0, 1000, 1000);
    
-  } else if (estado == SJUEGO){  //Pantalla de seleccion de jugador
+  } else if (estado == CREDITOS){ //Pantalla de créditos
+    background(0);
+    image(img14,0,0,1000,1000);
+  
+  }else if (estado == SJUEGO){  //Pantalla de seleccion de jugador
      background(0);
     image(img3, 0, 0, 1000, 1000);
-    
-    
-   
     
   } else if (estado == JUEGOM){  //Pantalla del partido jugador 'Jos'
      background(0);
@@ -153,12 +154,7 @@ void draw() {
     background(0);
     image(img10, 200, 300, 600, 400);
 
-
-   
  }
-    
-    
-  
 }
 
 void mouseReleased() { //Controles de usuario para estados
@@ -185,8 +181,6 @@ void mouseReleased() { //Controles de usuario para estados
     estado = PANTALLAINICIAL;
     reinicio = true;
     
-    
- 
 //abandonara a partido
  } else if (mouseY > 555 && mouseY < 605 && mouseX > 550 && mouseX < 600 && estado == ABANDONARM) {
     
@@ -242,5 +236,13 @@ void mouseReleased() { //Controles de usuario para estados
 //instrucciones a menu
   } else if (mouseY > 930 && mouseY < 970 && mouseX > 830 && mouseX < 960 && estado == INSTRUCCIONES) {
     estado = PANTALLAINICIAL;
-    
+
+//menu a créditos   
+}else if (mouseY > 890 && mouseY < 900 &&  mouseX > 830 && mouseX < 905 && estado == PANTALLAINICIAL) {
+  estado = CREDITOS;
+
+//créditos a menu
+ }else if(mouseY > 930 && mouseY < 970 &&  mouseX > 830 && mouseX < 960 && estado == CREDITOS) {
+   estado = PANTALLAINICIAL;
+ }
 }
