@@ -111,7 +111,7 @@ class Tenista2 {
   posY2 = posYinic2;
   w2 = 100;
   jugadorF = loadImage("jugadorF.png");
-   jugadorf = loadImage("jugadorF_arriba.png");
+  jugadorf = loadImage("jugadorF_arriba.png");
   puntos = 0;
    
   }
