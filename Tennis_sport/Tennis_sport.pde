@@ -232,6 +232,7 @@ void draw() {
     //Movimiento y dibujo del jugador JOS
     VSmjugador.update1();
     VSmjugador.ser1();
+    
      //Puntaje de cada jugador
     pushMatrix();
     textSize(30);
