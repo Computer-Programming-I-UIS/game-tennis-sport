@@ -38,6 +38,7 @@ PImage img17;
 PImage img18;
 PImage img19;
 PImage img20;
+PImage img21;
 
 //Jugadores
 Tenista1 mjugador;
@@ -79,7 +80,8 @@ void setup() {
   img18 = loadImage("mjugador_arriba.png");
   img19 = loadImage("jugadorF_arrriba.png");
   img20 = loadImage("jugadorM_arriba.png");
-
+  img21 = loadImage("puntuacion.png");
+ 
  sonido = new SoundFile(this, "sonido.mp3");
  sonido.play(); //Reproducir sonido 
   
@@ -122,6 +124,7 @@ void draw() {
     image(img4, 0, 0, 1000, 1000);
     image(img8, 20, 20, 40, 40);
     image(img9, 20, 80, 40, 40);
+    image(img21, 265, 43, 455, 158);
    
      //Moviento y dibujo del jugador JOS
      mjugador.update1();
@@ -224,6 +227,7 @@ void draw() {
     image(img4, 0, 0, 1000, 1000);
     image(img8, 20, 20, 40, 40);
     image(img9, 20, 80, 40, 40);
+    image(img21, 265, 43, 455, 158);
    
     //Moviento y dibujo del jugador FRAN
     fjugador.update2(); 
