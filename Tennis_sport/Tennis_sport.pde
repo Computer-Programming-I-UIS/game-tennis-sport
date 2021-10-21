@@ -349,7 +349,7 @@ void mouseReleased() { //Controles de usuario para estados
       pelota.velocidad.x *= -1*random(0.1, 1.1);
     }
     if ( dist(VSfjugador.vsposX2-67, VSfjugador.vsposY2+1, pelota.posicion.x, pelota.posicion.y) <= ((VSfjugador.w2-20)/2) + (pelota.radio) ) { // JUGADOR FRAN ARRIBA
-      image(img17, VSfjugador.vsposX2-42, VSfjugador.vsposY2+1, VSfjugador.w2, VSfjugador.w2+20);
+      image(img17, VSfjugador.vsposX2-67, VSfjugador.vsposY2-49, VSfjugador.w2, VSfjugador.w2+20);
       println("Holaaa");
       pelota.velocidad.y *= -1;
       pelota.velocidad.x *= -1*random(0.1, 1.1);
@@ -357,7 +357,7 @@ void mouseReleased() { //Controles de usuario para estados
     break;
   case JUEGOF:
     if ( dist(VSmjugador.vsposX1-67, VSmjugador.vsposY1+1, pelota.posicion.x, pelota.posicion.y) <= ((VSmjugador.w1-20)/2) + (pelota.radio) ) { // JUGADOR JOS ARRIBA
-      image(img18, VSmjugador.vsposX1-42, VSmjugador.vsposY1+1, VSmjugador.w1, VSmjugador.w1+20);
+      image(img18, VSmjugador.vsposX1-67, VSmjugador.vsposY1-49, VSmjugador.w1, VSmjugador.w1+20);
       println("Holaaa");
       pelota.velocidad.y *= -1;
       pelota.velocidad.x *= -1*random(0.1, 1.1);
