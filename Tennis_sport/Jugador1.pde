@@ -102,6 +102,7 @@ class Tenista2 {
   float posY2;
   float w2;
   PImage jugadorF;
+  PImage jugadorf;
   int puntos;
   
   //CONSTRUCTOR
@@ -110,7 +111,7 @@ class Tenista2 {
   posY2 = posYinic2;
   w2 = 100;
   jugadorF = loadImage("jugadorF.png");
-   jugadorm = loadImage("jugadorF_arriba.png");
+   jugadorf = loadImage("jugadorF_arriba.png");
   puntos = 0;
    
   }
