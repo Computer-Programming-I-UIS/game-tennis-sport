@@ -73,7 +73,7 @@ void setup() {
   img11 = loadImage("winnerjos.png");
   img12 = loadImage("winnerfran.png");
   img13 = loadImage("gameover.png");
-  img14 = loadImage("creditos.png");
+  img14 = loadImage("credito.png");
   img15 = loadImage("winnerfran.png");
   img16 = loadImage("winnerjos.png");
   img17 = loadImage("fjugador_arriba.png");
