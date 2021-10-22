@@ -8,7 +8,7 @@ class Tenista1 {
   PImage jugadorM;
   PImage jugadorm;
   int puntos;
-<<<<<<< HEAD
+
 
   //CONSTRUCTOR
   Tenista1(int posXinic1, int posYinic1) {
@@ -84,7 +84,7 @@ class Tenista1 {
     }
   }
 
-=======
+
   
   //CONSTRUCTOR
   Tenista1(int posXinic1, int posYinic1){
@@ -164,16 +164,12 @@ if (keyPressed == true && key == CODED && keyCode == UP){
      //recordar reiniciar puntuación
    }
   }
->>>>>>> a922cf828b11b297e11731bacc80a52a65070642
+
   //contador de puntos
   void setPuntos(int puntos_) {
     puntos += puntos_;
   }
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   int getPuntos() {
     return puntos;
   }
@@ -186,7 +182,7 @@ class Tenista2 {
   PImage jugadorF;
   PImage jugadorf;
   int puntos;
-<<<<<<< HEAD
+
 
   //CONSTRUCTOR
   Tenista2(int posXinic2, int posYinic2) {
@@ -197,7 +193,7 @@ class Tenista2 {
     jugadorf = loadImage("jugadorF_arriba.png");
     puntos = 0;
   }
-=======
+
   
   //CONSTRUCTOR
   Tenista2(int posXinic2, int posYinic2){
@@ -229,7 +225,8 @@ if (keyPressed == true && key == CODED && keyCode == UP){
   posY2 = posY2 - 40;
   posY2 = constrain(posY2, 570, height-100); // Limites en la pantalla
 }
->>>>>>> a922cf828b11b297e11731bacc80a52a65070642
+}
+
 
   //METODOS
   //Controles del mouse
@@ -265,8 +262,7 @@ if (keyPressed == true && key == CODED && keyCode == UP){
   int getPuntos() {
     return puntos;
   }
-<<<<<<< HEAD
-=======
+
   //contador de puntos
   void setPuntos(int puntos_) {
     puntos += puntos_;
@@ -275,5 +271,5 @@ if (keyPressed == true && key == CODED && keyCode == UP){
   int getPuntos() {
     return puntos;
   }
->>>>>>> a922cf828b11b297e11731bacc80a52a65070642
+
 }
