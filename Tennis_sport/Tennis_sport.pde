@@ -16,9 +16,13 @@ final int ABANDONARM = 8;
 final int ABANDONARF = 9;
 final int CREDITOS = 10;
 
+<<<<<<< HEAD
 
 
 //Imagenes
+=======
+//Imagenes 
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
 PImage img;
 PImage img2;
 PImage img3;
@@ -33,7 +37,10 @@ PImage img11;
 PImage img12;
 PImage img13;
 PImage img14;
+<<<<<<< HEAD
 
+=======
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
 PImage img15;
 PImage img16;
 PImage img17;
@@ -41,7 +48,10 @@ PImage img18;
 PImage img19;
 PImage img20;
 PImage img21;
+<<<<<<< HEAD
 
+=======
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
 
 //Jugadores
 Tenista1 mjugador;
@@ -49,11 +59,12 @@ Tenista2 fjugador;
 vsTenista1 VSmjugador;
 vsTenista2 VSfjugador;
 
+//Pelota
 Pelota pelota;
-
 boolean ganador;
-boolean reinicio = false;
 int puntajeMaximo;
+
+boolean reinicio = false;
 
 void setup() {
 
@@ -75,12 +86,17 @@ void setup() {
   img11 = loadImage("winnerjos.png");
   img12 = loadImage("winnerfran.png");
   img13 = loadImage("gameover.png");
+<<<<<<< HEAD
   img14 = loadImage("creditos.png");
 
+=======
+  img14 = loadImage("credito.png");
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   img15 = loadImage("winnerfran.png");
   img16 = loadImage("winnerjos.png");
   img17 = loadImage("fjugador_arriba.png");
   img18 = loadImage("mjugador_arriba.png");
+<<<<<<< HEAD
   img19 = loadImage("jugadorF_arriba.png");
   img20 = loadImage("jugadorM_arriba.png");
   img21 = loadImage("puntuacion.png");
@@ -90,6 +106,16 @@ void setup() {
   //sonido.play(); //Reproducir sonido
 
   //Jugadores
+=======
+  img19 = loadImage("jugadorF_arrriba.png");
+  img20 = loadImage("jugadorM_arriba.png");
+  img21 = loadImage("puntuacion.png");
+ 
+ sonido = new SoundFile(this, "sonido.mp3");
+ sonido.play(); //Reproducir sonido 
+  
+    //Jugadores
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   mjugador = new Tenista1(280, 850);
   fjugador = new Tenista2(280, 850);
   VSmjugador = new vsTenista1(680, 270);
@@ -97,7 +123,11 @@ void setup() {
 
   pelota = new Pelota(1); //se crea la pelota
   ganador = false; //al inicio no hay ningun ganador
+<<<<<<< HEAD
   puntajeMaximo = 180;//el puntaje que los jugadores deben de alcanzar para ganar
+=======
+  puntajeMaximo = 180; //el puntaje que los jugadores deben de alcanzar para ganar 
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
 }
 
 void draw() {
@@ -107,10 +137,15 @@ void draw() {
     image(img, 0, 0, 1000, 1000);
     image(img5, 50, 850, 80, 100);
     image(img9, 20, 80, 40, 40);
+<<<<<<< HEAD
+=======
+    
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   } else if (estado == INSTRUCCIONES) { //Pantalla de instrucciones del juego
     background(0);
     image(img2, 0, 0, 1000, 1000);
     image(img9, 20, 80, 40, 40);
+<<<<<<< HEAD
   } else if (estado == CREDITOS) { //Pantalla de créditos
     background(0);
     image(img14, 0, 0, 1000, 1000);
@@ -121,10 +156,26 @@ void draw() {
     image(img9, 20, 80, 40, 40);
   } else if (estado == JUEGOM) {  //Pantalla del partido jugador 'Jos'
     background(0);
+=======
+    
+  } else if (estado == CREDITOS){ //Pantalla de créditos
+    background(0);
+    image(img14,0,0,1000,1000);
+    image(img9, 20, 80, 40, 40);
+    
+  }else if (estado == SJUEGO){  //Pantalla de seleccion de jugador
+    background(0);
+    image(img3, 0, 0, 1000, 1000);
+    image(img9, 20, 80, 40, 40);
+    
+  } else if (estado == JUEGOM){  //Pantalla del partido jugador 'Jos'
+     background(0);
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
     image(img4, 0, 0, 1000, 1000);
     image(img8, 20, 20, 40, 40);
     image(img9, 20, 80, 40, 40);
     image(img21, 265, 43, 455, 158);
+<<<<<<< HEAD
 
 
     //Moviemto del jugador y dibujo Jos
@@ -136,6 +187,18 @@ void draw() {
     VSfjugador.ser2();
 
     //Puntaje de cada jugador
+=======
+   
+     //Moviento y dibujo del jugador JOS
+     mjugador.update1();
+     mjugador.ser1();
+     
+     //Movimiento y dibujo del jugador FRAN
+     VSfjugador.update2();
+     VSfjugador.ser2();
+     
+     //Puntaje de cada jugador
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
     pushMatrix();
     textSize(30);
     fill(0);
@@ -221,12 +284,20 @@ void draw() {
       pelota.mover();
     }
     popMatrix();
+<<<<<<< HEAD
   } else if (estado == JUEGOF) {  //Pantalla del partido jugadora 'Fran'
     background(0);
+=======
+   
+    
+  } else if (estado == JUEGOF){  //Pantalla del partido jugadora 'Fran'
+     background(0);
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
     image(img4, 0, 0, 1000, 1000);
     image(img8, 20, 20, 40, 40);
     image(img9, 20, 80, 40, 40);
     image(img21, 265, 43, 455, 158);
+<<<<<<< HEAD
 
     //Moviemto del jugador y dibujo Fram
     fjugador.update2();
@@ -235,6 +306,104 @@ void draw() {
     //Moviemto del jugador y dibujo Jos
     VSmjugador.update1();
     VSmjugador.ser1();
+=======
+   
+    //Moviento y dibujo del jugador FRAN
+    fjugador.update2(); 
+    fjugador.ser2();
+    
+    //Movimiento y dibujo del jugador JOS
+    VSmjugador.update1();
+    VSmjugador.ser1();
+    
+     //Puntaje de cada jugador
+    pushMatrix();
+    textSize(30);
+    fill(0);
+    text(VSmjugador.getPuntos(), 400, 130); //Puntos
+    text(fjugador.getPuntos(), 400, 170); //Puntos
+
+    //Jugador Jos arriba
+    if (VSmjugador.getPuntos() == 60) { //Agregar las X a todos los sets
+      fill(#FF0808);
+      text("X", 500, 130); //Primer set
+    } else if (VSmjugador.getPuntos() == 75) {
+      fill(#FF0808);
+      text("X", 500, 130); //Primer set
+    } else if (VSmjugador.getPuntos() == 90) {
+      fill(#FF0808);
+      text("X", 500, 130); //Primer set
+    } else if (VSmjugador.getPuntos() == 105) {
+      fill(#FF0808);
+      text("X", 500, 130); //Primer set
+    }
+    if (VSmjugador.getPuntos() == 120) {
+      fill(#FF0808);
+      text("X", 500, 130); //Primer set
+      text("X", 585, 130); //Segundo set
+    }else if(VSmjugador.getPuntos() == 135) {
+      fill(#FF0808);
+      text("X", 500, 130); //Primer set
+      text("X", 585, 130); //Segundo set
+    }else if(VSmjugador.getPuntos() == 150) {
+      fill(#FF0808);
+      text("X", 500, 130); //Primer set
+      text("X", 585, 130); //Segundo set
+    }else if(VSmjugador.getPuntos() == 165) {
+      fill(#FF0808);
+      text("X", 500, 130); //Primer set
+      text("X", 585, 130); //Segundo set
+    }
+    if (VSmjugador.getPuntos() == puntajeMaximo) {
+      fill(#FF0808);
+      text("X", 500, 130); //Primer set
+      text("X", 585, 130); //Segundo set
+      text("X", 660, 130); //Tercer set
+    }
+    //Jugador Fran abajo
+    if (fjugador.getPuntos() == 60) {
+      fill(#FF0808);
+      text("X", 500, 170); //Primer set
+    }else if (fjugador.getPuntos() == 75){
+      fill(#FF0808);
+      text("X", 500, 170); //Primer set
+    }else if (fjugador.getPuntos() == 90){
+      fill(#FF0808);
+      text("X", 500, 170); //Primer set
+    }else if (fjugador.getPuntos() == 105){
+      fill(#FF0808);
+      text("X", 500, 170); //Primer set
+    }
+    if (fjugador.getPuntos() == 120) {
+      fill(#FF0808);
+      text("X", 500, 170); //Primer set
+      text("X", 585, 170); //Segundo set
+    }else if (fjugador.getPuntos() == 135){
+      fill(#FF0808);
+      text("X", 500, 170); //Primer set
+      text("X", 585, 170); //Segundo set
+    }else if (fjugador.getPuntos() == 150){
+      fill(#FF0808);
+      text("X", 500, 170); //Primer set
+      text("X", 585, 170); //Segundo set
+    }else if (fjugador.getPuntos() == 165){
+      fill(#FF0808);
+      text("X", 500, 170); //Primer set
+      text("X", 585, 170); //Segundo set
+    }
+    if (fjugador.getPuntos() == puntajeMaximo) {
+      fill(#FF0808);
+      text("X", 500, 170); //Primer set
+      text("X", 585, 170); //Segundo set
+      text("X", 660, 170); //Tercer set
+    }
+    if (ganador == false) {
+      pelota.mostrar();
+      pelota.mover();
+    }
+    popMatrix();
+    
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
 
     if (ganador == false) {
       pelota.mostrar();
@@ -329,15 +498,23 @@ void draw() {
   } else if (estado == ABANDONARF) { //Pantalla de abandonar juego
     background(0);
     image(img10, 200, 300, 600, 400);
+<<<<<<< HEAD
   }
 
+=======
+ }
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   validarPuntos();
   validarGanador();
 }
 
 void mouseReleased() { //Controles de usuario para estados
 
+<<<<<<< HEAD
   // Verificar posicion colision pelota jugador
+=======
+// Verificar posicion colision pelota jugador
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   switch(estado) {
   case JUEGOM:
     if ( dist(mjugador.posX1-27, mjugador.posY1+1, pelota.posicion.x, pelota.posicion.y) <= ((mjugador.w1-20)/2) + (pelota.radio) ) { // JUGADOR JOS ABAJO
@@ -370,10 +547,15 @@ void mouseReleased() { //Controles de usuario para estados
   }
 
 
+<<<<<<< HEAD
   //menu a eleccion del jugador
+=======
+//menu a eleccion del jugador 
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   if (mouseY > 640 && mouseY < 670 && mouseX > 600 && mouseX < 880 && estado == PANTALLAINICIAL) {
 
     estado = SJUEGO;
+<<<<<<< HEAD
 
     //Detener sonido en pantalla inicial
   } else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == PANTALLAINICIAL) {
@@ -384,20 +566,41 @@ void mouseReleased() { //Controles de usuario para estados
     }
 
     //eleccion de jugador 'Jos' a juego
-  } else if (mouseY > 250 && mouseY < 700 && mouseX > 150 && mouseX < 460 && estado == SJUEGO) {
-
-    estado = JUEGOM;
-
-    //Detener sonido en seleccion de jugadores
-  } else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == SJUEGO) {
+=======
+ 
+ }else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == PANTALLAINICIAL) {
     if (sonido.isPlaying()) {
       sonido.pause(); //Detener sonido
     } else {
       sonido.play();
+    } 
+    
+//eleccion de jugador 'Jos' a juego
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
+  } else if (mouseY > 250 && mouseY < 700 && mouseX > 150 && mouseX < 460 && estado == SJUEGO) {
+
+    estado = JUEGOM;
+<<<<<<< HEAD
+
+    //Detener sonido en seleccion de jugadores
+  } else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == SJUEGO) {
+=======
+  
+  }else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == PANTALLAINICIAL) {
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
+    if (sonido.isPlaying()) {
+      sonido.pause(); //Detener sonido
+    } else {
+      sonido.play();
+<<<<<<< HEAD
     }
 
 
     //abandonar juego
+=======
+    } 
+//abandonar juego
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   } else if (mouseY > 20 && mouseY < 60 && mouseX > 20 && mouseX < 60 && estado == JUEGOM) {
 
     estado = ABANDONARM;
@@ -407,14 +610,22 @@ void mouseReleased() { //Controles de usuario para estados
 
     estado = PANTALLAINICIAL;
     reinicio = true;
+<<<<<<< HEAD
 
     //abandonara a partido
   } else if (mouseY > 555 && mouseY < 605 && mouseX > 550 && mouseX < 600 && estado == ABANDONARM) {
 
+=======
+    
+//abandonara a partido
+ } else if (mouseY > 555 && mouseY < 605 && mouseX > 550 && mouseX < 600 && estado == ABANDONARM) {
+    
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
     estado = JUEGOM;
 
     // Desactivar sonido en la partida
   } else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == JUEGOM) {
+<<<<<<< HEAD
 
     if (sonido.isPlaying()) {
       sonido.pause(); //Detener sonido
@@ -423,6 +634,15 @@ void mouseReleased() { //Controles de usuario para estados
     }
 
     //eleccion de jugadora 'Fran' a juego
+=======
+    if(sonido.isPlaying()){
+    sonido.pause(); //Detener sonido
+  }else{
+    sonido.play();
+  }
+    
+ //eleccion de jugadora 'Fran' a juego
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   } else if (mouseY > 250 && mouseY < 700 && mouseX > 560 && mouseX < 890 && estado == SJUEGO) {
 
     estado = JUEGOF;
@@ -445,6 +665,7 @@ void mouseReleased() { //Controles de usuario para estados
 
     // Desactivar sonido en la partida
   } else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == JUEGOF) {
+<<<<<<< HEAD
 
     if (sonido.isPlaying()) {
       sonido.pause(); //Detener sonido
@@ -454,6 +675,16 @@ void mouseReleased() { //Controles de usuario para estados
 
 
     //eleccion del jugador a menu
+=======
+   
+   if(sonido.isPlaying()){
+    sonido.pause(); //Detener sonido
+  }else{
+    sonido.play();
+  }
+    
+//eleccion del jugador a menu
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   } else if (mouseY > 930 && mouseY < 970 && mouseX > 830 && mouseX < 960 && estado == SJUEGO) {
 
     estado = PANTALLAINICIAL;
@@ -465,14 +696,33 @@ void mouseReleased() { //Controles de usuario para estados
     //instrucciones a menu
   } else if (mouseY > 930 && mouseY < 970 && mouseX > 830 && mouseX < 960 && estado == INSTRUCCIONES) {
     estado = PANTALLAINICIAL;
+<<<<<<< HEAD
 
     // Desactivar sonido en instrucciones
   } else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == INSTRUCCIONES) {
 
+=======
+  
+  }else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == PANTALLAINICIAL) {
     if (sonido.isPlaying()) {
       sonido.pause(); //Detener sonido
     } else {
       sonido.play();
+    } 
+//menu a créditos   
+}else if (mouseY > 890 && mouseY < 900 &&  mouseX > 830 && mouseX < 905 && estado == PANTALLAINICIAL) {
+  estado = CREDITOS;
+
+//créditos a menu
+ }else if(mouseY > 930 && mouseY < 970 &&  mouseX > 830 && mouseX < 960 && estado == CREDITOS) {
+   estado = PANTALLAINICIAL;
+ }else if (mouseY > 80 && mouseY < 140 && mouseX > 20 && mouseX < 60 && estado == PANTALLAINICIAL) {
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
+    if (sonido.isPlaying()) {
+      sonido.pause(); //Detener sonido
+    } else {
+      sonido.play();
+<<<<<<< HEAD
     }
 
     //menu a créditos
@@ -497,6 +747,15 @@ void mouseReleased() { //Controles de usuario para estados
 void validarPuntos() {
   PVector posicionPelota = pelota.getPosicion();
 
+=======
+    } 
+  }
+}
+
+void validarPuntos() {
+  PVector posicionPelota = pelota.getPosicion();
+
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   switch(estado) {
   case JUEGOM://Juego de Jos
     if (posicionPelota.y < 315 && mjugador.getPuntos() <= puntajeMaximo) {
@@ -521,6 +780,37 @@ void validarPuntos() {
       setup();
     }
     break;
+<<<<<<< HEAD
+  }
+}
+
+void validarGanador() {
+  fill(0);
+  //Al alcanzar el puntaje maximo el jugador gana
+  if (mjugador.getPuntos() == puntajeMaximo) {
+    image(img16, 250, 150, 500, 500);
+    textSize(30);
+    text("Presione cualquier tecla para volver a jugar", 100, 800);
+    ganador = true;
+  } else if (VSfjugador.getPuntos() == puntajeMaximo) {
+    image(img15, 250, 250, 500, 500);
+    textSize(30);
+    text("Presione cualquier tecla para volver a jugar", 100, 800);
+    ganador = true;
+  }
+  //Al alcanzar el puntaje maximo el jugador gana
+  if (fjugador.getPuntos() == puntajeMaximo) {
+    image(img15, 250, 250, 500, 500);
+    textSize(40);
+    text("Presione cualquier tecla para volver a jugar", 100, 800);
+    ganador = true;
+  } else if (VSmjugador.getPuntos() == puntajeMaximo) {
+    image(img16, 250, 250, 500, 500);
+    textSize(40);
+    text("Presione cualquier tecla para volver a jugar", 100, 800);
+    ganador = true;
+=======
+>>>>>>> a922cf828b11b297e11731bacc80a52a65070642
   }
 }
 
@@ -551,3 +841,6 @@ void validarGanador() {
     ganador = true;
   }
 }
+
+
+
