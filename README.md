@@ -22,14 +22,14 @@ Videojuego deportivo RPG enfocado en Tennis
 
 Recomendado para toda la familia
 
-Personas mayores de 10 años
+![clasificacion](https://user-images.githubusercontent.com/90159928/138395725-9b69ecc7-123d-476c-b2e6-d39ce0427ab1.png)
 
-![image](https://user-images.githubusercontent.com/90159928/136195333-a6db8dc5-a578-4ec2-b17b-d33b1ef77505.png)
 
 
 # Controles
 
-![instruccion](https://user-images.githubusercontent.com/90159928/136508382-668acdfd-e975-424d-8d8d-9282114581dc.png)
+
+![instrucciones](https://user-images.githubusercontent.com/90159928/138395947-6fca93f3-ac21-48eb-ad52-a23ad1904f38.png)
 
 
 
